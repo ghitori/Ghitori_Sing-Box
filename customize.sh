@@ -6,6 +6,7 @@ if [ "${BOOTMODE}" != true ]; then
   ui_print "! Please install in Magisk Manager or KernelSU Manager"
   ui_print "! Install from recovery is NOT supported"
   abort "-----------------------------------------------------------"
+fi
 
 # check android
 if [ "${API}" -lt 28 ]; then
@@ -45,10 +46,8 @@ mv ${MODPATH}/gh_sing-box_service.sh ${service_d}
 
 # creat config
 if [ ! -f "${singbox_path}/config.txt" ];then
-  cat>"${singbox_path}/config.txt"<<EOF
-    sub="" 
-    cron="0 4 * * *"
-  EOF
+  echo 'sub=""' >> "${singbox_path}/config.txt"
+  echo 'cron="0 4 * * *"' >> "${singbox_path}/config.txt"
 fi
 
 # set permissions

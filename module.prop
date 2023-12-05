@@ -1,0 +1,7 @@
+id=gh_sing-box
+name=Ghitori Sing-Box
+version=v0.1_alpha
+versionCode=20231205
+author=Shan_shanHY
+description=A Simple Sing-Box Module
+updateJson=https://raw.githubusercontent.com/ShanshanHY/Ghitori_Sing-Box/version/latest.json
